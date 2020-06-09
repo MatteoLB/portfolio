@@ -1,0 +1,583 @@
+body
+{
+	font-family: 'Work Sans', sans-serif;
+}
+
+a
+{
+	color: inherit;
+}
+
+h1
+{
+	font-size: 4rem;
+}
+
+
+/* ************************************************************************* NAVBAR **************************************************************** */
+
+#navbar
+{
+	z-index: 500;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background: #6d0000;
+}
+
+#navbar ul
+{
+	list-style-type: none;
+	margin-bottom: 0px;
+}
+
+#navbar li
+{
+	padding: 2px 20px;
+}
+
+#navbar .activePage
+{
+	border-bottom: 2px solid white;
+}
+
+.navButton
+{
+	background: transparent;
+	border: none;
+	color: white;
+	font-size: 1.3rem;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.navButton:hover
+{
+	border-bottom: 2px solid white;
+}
+
+
+
+/* ********************************************************************** ABOUT ME PAGE ************************************************************ */
+
+#aboutMeContainer
+{
+	overflow-x: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/*background: linear-gradient(140deg, #f97e67, #5a0101);*/
+	background: linear-gradient(140deg, #e6a581, #6b0000);
+	color: white;
+	display: none; /* ********************************************************************************************************************* */
+}
+
+#iam
+{
+	font-size: 18rem;
+	font-weight: 500;
+	font-family: 'Dosis', sans-serif;
+	color: #670000;
+	text-shadow: 4px 4px 0px #a20000;
+}
+
+#aboutMeContent h1
+{
+	font-size: 4rem;
+}
+
+#aboutMeContent p
+{
+	font-size: 1.5rem;
+}
+
+.networksLinks a:hover
+{
+	color: silver;
+	text-decoration: none;
+}
+
+.slideLeft
+{
+	display: inline-block;
+	animation: 1.5s slideLeft forwards;
+}
+.slideRight
+{
+	display: inline-block;
+	animation: 1.5s slideRight forwards;
+}
+.slideUp
+{
+	display: inline-block;
+	animation: 1.5s slideUp forwards;
+}
+.slideDown
+{
+	display: inline-block;
+	animation: 1.5s slideDown forwards;
+}
+
+.iamAnimation
+{
+	/*animation: iamAnimation 1.5s forwards;*/
+}
+
+@keyframes slideLeft
+{
+	0% 
+	{
+		transform: translateX(-200px);
+		opacity: 0.2;
+	}
+	/*85%
+	{
+		transform: translateX(20px);
+	}*/
+	100% 
+	{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slideRight
+{
+	0% 
+	{
+		transform: translateX(200px);
+		opacity: 0.2;
+	}
+	/*85%
+	{
+		transform: translateX(-20px);
+	}*/
+	100% 
+	{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp
+{
+	0% 
+	{
+		transform: translateY(-200px);
+		opacity: 0.2;
+	}
+	/*85%
+	{
+		transform: translateY(20px);
+	}*/
+	100% 
+	{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slideDown
+{
+	0% 
+	{
+		transform: translateY(200px);
+		opacity: 0.2;
+	}
+	/*85%
+	{
+		transform: translateY(-20px);
+	}*/
+	100% 
+	{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes iamAnimation
+{
+	0%
+	{
+		opacity: 0.1;
+		transform: scaleX(0.01);
+	}
+	85%
+	{
+		transform: scaleX(1.2);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: scaleX(1);
+	}
+}
+
+
+/* *************************************************************************** SKILLS PAGE *********************************************************** */
+.skillsColor
+{
+	color: #ffd29f;
+	fill: #ffd29f;
+	/*color: #9fd9ff;*/
+	animation: appearingText 6s infinite;
+}
+
+@keyframes appearingText
+{
+	0%, 3%
+	{
+		fill: transparent;
+	}
+	60%, 100%
+	{
+		fill: #ffd29f;
+	}
+}
+
+svg path
+{
+	/*stroke: #ffd29f;*/
+}
+
+#skillsContainer
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	/*background: linear-gradient(140deg, hsla(0, 55%, 50%, 1), hsla(0, 74%, 18%, 1) 60%);*/
+	background: radial-gradient(circle at right -3% bottom 40%,
+								rgba(255, 230, 0, 1) -8%, 
+								rgba(255, 230, 0, 0.2) 20%, 
+								rgba(255, 230, 0, 0.1) 25%, 
+								rgba(0, 0, 0, 0) 34%) top, 
+				linear-gradient(140deg, 
+								hsla(0, 55%, 50%, 1), 
+								hsla(0, 74%, 18%, 1) 60%) bottom;
+
+	color: white;
+	display: none; /* ********************************************************************************************************************* */
+}
+
+
+#skillsContainer p
+{
+	font-size: 1.3rem;
+}
+
+#skillsRow
+{
+	height: 100%;
+}
+
+
+
+/* ************************** ANIMATE DRAWING SVG ************************* */
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 6s linear forwards /*infinite*/;
+}
+
+@keyframes dash {
+	from 
+	{
+		fill: transparent;
+	}
+  	to 
+  	{
+    	stroke-dashoffset: 0;
+    	fill: transparent;
+  	}
+}
+
+
+
+/* ************************ RESPONSIVE SVG ***************************** */
+.svgContainer
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/*overflow: hidden;*/
+	padding-bottom: 15px;
+}
+
+.skillsBalls
+{
+	position: relative;
+	z-index: 50;
+	background: #9c2121;
+	border-radius: 50%;
+	height: 120px;
+	width: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 5px;
+	box-shadow: 0px 3px 12px rgba(30,30,30, 0.6);
+}
+
+.skillsBalls:hover
+{
+	z-index: 300;
+}
+
+.skillsBalls:hover::after
+{
+	content: "";
+	position: fixed;
+	border-radius: 50%;
+	background: rgba(40, 40, 40, 0.7);
+	overflow: hidden;
+	z-index: 120;
+	animation: expand 2s forwards;
+	pointer-events: none;
+}
+
+
+@keyframes expand {
+	0% {
+		height: 0%;
+		width: 0%;
+		background: rgba(0, 0, 0, 0);
+	}
+	100% {
+		background: rgba(40, 40, 40, 0.7);
+		height: 5000px;
+		width: 5000px;
+	}
+}
+
+
+.skillsBalls span
+{
+	background: #9c2121;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    display: flex;
+    z-index: 160;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skillsBalls:nth-child(1)
+{
+	margin-top: -20%;
+}
+.skillsBalls:nth-child(2)
+{
+	margin-top: 20%;
+}
+.skillsBalls:nth-child(3)
+{
+	margin-top: 60%;
+}
+
+
+.frontEndSkills, .backEndSkills, .othersSkills
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 50;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background: orange;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	color: white;
+	transition: 1s;
+}
+
+
+
+.svgContent
+{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*filter: drop-shadow(10px 10px 10px #3e0000);*/
+}
+
+.svgTitle
+{
+	height: 200px;
+}
+
+.svgFrontEnd
+{
+	animation: switchSVG ease-out 12s infinite;
+}
+
+.svgBackEnd
+{
+	animation: switchSVG ease-out 12s infinite;
+	animation-delay: -6s;
+}
+
+@keyframes switchSVG 
+{
+	0%
+	{
+		transform: scale(0, 1);
+	}
+	10%
+	{
+		transform: scale(0.95);
+	}
+	45%
+	{
+		transform: scale(1);
+	}
+	50%
+	{
+		transform: scale(0, 1);
+	}
+	100%
+	{
+		transform: scale(0, 1);
+	}
+}
+
+
+
+/* ********************************************************************** PROJECTS PAGE ************************************************************** */
+
+
+#projectsContainer
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	/*height: 100%; limits the height to the viewport */
+	/*background: linear-gradient(140deg, #9e3939, #3e0000);*/
+	background: linear-gradient(140deg, #ca6533, #983232 40%);
+	color: white;
+}
+
+#projectsContainer h1
+{
+	font-size: 18rem;
+	font-weight: 500;
+	font-family: 'Dosis', sans-serif;
+	animation: titleShrink 1s forwards;
+}
+
+@keyframes titleShrink
+{
+	to
+	{
+		font-size: 8rem;
+	}
+}
+
+.projectSeparator
+{
+	background-color: white;
+	height: 5px;
+	border-radius: 50px;
+}
+
+.projectImgLeft
+{
+	position: relative;
+    z-index: 10;
+    bottom: 15px;
+    left: 43px;
+}
+.projectImgRight
+{
+	position: relative;
+    z-index: 10;
+    bottom: 15px;
+    right: 43px;
+}
+
+.projectImgLeft img, .projectImgRight img
+{
+	border-radius: 10px;
+}
+
+.projectCardRight, .projectCardLeft
+{
+	background: #fffdf0; /* #fff5e2 */
+    border-radius: 15px;
+    color: #3e3e3e;
+    position: relative;
+    top: 20px;
+    padding: 3rem;
+}
+.projectCardRight
+{
+	padding-left: 100px;
+	right: 43px;
+}
+.projectCardLeft
+{
+	padding-right: 100px;
+	left: 43px;
+}
+
+.projectImgLeft, .projectCardLeft 
+{
+	animation: 1s slideLeft forwards;
+}
+
+.projectImgRight, .projectCardRight
+{
+	animation: 1s slideRight forwards;
+}
+
+.projectCardRight h2, .projectCardLeft h2
+{
+	font-size: 2.5rem;
+}
+
+.projectButton
+{
+	background: #9C0000;
+	color: white;
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+	padding: 10px 15px;
+	border: 1px solid #9C0000;
+	transition: 0.4s;
+}
+
+.projectButtonGithub
+{
+	background: #424242;
+	border-color: #424242;
+}
+
+.projectButton:hover
+{
+	background: transparent;
+	text-decoration: none;
+	color: #9C0000;
+}
+
+.projectButtonGithub:hover
+{
+	color: #424242;
+}
