@@ -22,6 +22,11 @@
 		animation: none;
 	}
 
+	#projectsContainer
+	{
+		overflow-x: hidden;
+	}
+
 	.projectImgLeft, .projectImgRight
 	{
 	    bottom: 0px;
