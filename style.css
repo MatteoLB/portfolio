@@ -88,11 +88,24 @@ h1
 #aboutMeContent h1
 {
 	font-size: 4rem;
+	text-shadow: 2px 2px 0px #a5a5a5;
 }
 
 #aboutMeContent p
 {
 	font-size: 1.5rem;
+}
+
+#myDescription
+{
+	font-weight: 300;
+	text-align: justify;
+}
+
+.networksLinks
+{
+	color: #670000;
+	font-weight: 600;
 }
 
 .networksLinks a:hover
@@ -398,7 +411,7 @@ svg path
 	left: 10px;
 	right: 10px;
 	bottom: 10px;
-	background: orange;
+	background: #ff8c2a;
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;

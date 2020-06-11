@@ -1,0 +1,62 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 600px) {
+	.navButton
+	{
+		font-size: 1rem;
+	}
+	#navbar li
+	{
+		padding: 2px 5px;
+	}
+	#navbar div ul.mx-md-auto, #navbar div, #navbar .mx-md-auto, #navbar
+	{
+		max-width: 100%;
+		padding-left: 0px;
+		margin-left: 0px !important;
+	}
+
+
+	#projectsContainer h1
+	{
+		font-size: 3rem;
+		animation: none;
+	}
+
+	.projectImgLeft, .projectImgRight
+	{
+	    bottom: 0px;
+	    left: 0px;
+	    right: 0px;
+	    margin: auto;
+	}
+
+	.projectCardRight, .projectCardLeft
+	{
+	    top: 0px;
+	    right: 0px;
+	    left: 0px;
+	    padding-left: 0px;
+	    padding-right: 0px;
+	    padding: 1rem;
+	    margin: auto;
+	}
+
+	.projectButton
+	{
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+}
+
+
+/***********************************************************************************************************************************************/
+/***********************************************************************************************************************************************/
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 601px) and (max-device-width : 1350px) {
+
+
+	
+
+}

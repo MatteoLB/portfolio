@@ -8,12 +8,17 @@ let projectsContainer = document.getElementById('projectsContainer');
 
 let frontEndSkillsBall = document.getElementById('frontEndSkillsBall');
 let frontEndSkills = document.getElementsByClassName('frontEndSkills');
+let skillsDescriptionFront = document.getElementsByClassName('skillsDescriptionFront');
 
 let backEndSkillsBall = document.getElementById('backEndSkillsBall');
 let backEndSkills = document.getElementsByClassName('backEndSkills');
+let skillsDescriptionBack = document.getElementsByClassName('skillsDescriptionBack');
 
 let othersSkillsBall = document.getElementById('othersSkillsBall');
 let othersSkills = document.getElementsByClassName('othersSkills');
+let skillsDescriptionOthers = document.getElementsByClassName('skillsDescriptionOthers');
+
+let mediaQuery = window.matchMedia("screen and (min-width: 1350px)");
 
 
 // display skills page
@@ -56,56 +61,82 @@ projectsButton.addEventListener('click', function() {
 });
 
 
+
+if (!mediaQuery.matches) // ***************************************************************************************************
+{
+  console.log('petit ecran');
+}
+
 // display the various kinds of skills
 frontEndSkillsBall.addEventListener('mouseover', function(e) {
-  explodeBalls(frontEndSkills);
+  explodeBalls(frontEndSkills, 'front');
 }); // event mouseover
 
 backEndSkillsBall.addEventListener('mouseover', function(e) {
-  explodeBalls(backEndSkills);
+  explodeBalls(backEndSkills, 'back');
 }); // event mouseover
 
 othersSkillsBall.addEventListener('mouseover', function(e) {
-  explodeBalls(othersSkills);
+  explodeBalls(othersSkills, 'others');
 });
+
+for (var i = 0; i < skillsDescriptionFront.length; i++) 
+{
+  skillsDescriptionFront[i].addEventListener('mouseover', function(e) {
+    explodeBalls(frontEndSkills, 'front');
+  });
+}
+
+for (var i = 0; i < skillsDescriptionBack.length; i++) 
+{
+  skillsDescriptionBack[i].addEventListener('mouseover', function(e) {
+    explodeBalls(backEndSkills, 'back');
+  });
+}
+
+for (var i = 0; i < skillsDescriptionOthers.length; i++) 
+{
+  skillsDescriptionOthers[i].addEventListener('mouseover', function(e) {
+    explodeBalls(othersSkills, 'others');
+  });
+}
 
 
 frontEndSkillsBall.addEventListener('mouseout', function(e) {
-  for (var i = 0; i < frontEndSkills.length; i++) 
-  {
-    frontEndSkills[i].style.top = '10px';
-    frontEndSkills[i].style.left = '10px';
-    frontEndSkills[i].style.right = '10px';
-    frontEndSkills[i].style.bottom = '10px';
-    frontEndSkills[i].style.zIndex = '40';
-  }
+    skillsMouseOut(frontEndSkills, 'front');
 });
 
 backEndSkillsBall.addEventListener('mouseout', function(e) {
-  for (var i = 0; i < frontEndSkills.length; i++) 
-  {
-    backEndSkills[i].style.top = '10px';
-    backEndSkills[i].style.left = '10px';
-    backEndSkills[i].style.right = '10px';
-    backEndSkills[i].style.bottom = '10px';
-    backEndSkills[i].style.zIndex = '40';
-  }
+  skillsMouseOut(backEndSkills, 'back');
 });
 
 othersSkillsBall.addEventListener('mouseout', function(e) {
-  for (var i = 0; i < frontEndSkills.length; i++) 
-  {
-    othersSkills[i].style.top = '10px';
-    othersSkills[i].style.left = '10px';
-    othersSkills[i].style.right = '10px';
-    othersSkills[i].style.bottom = '10px';
-    othersSkills[i].style.zIndex = '40';
-  }
+  skillsMouseOut(othersSkills, 'others');
 });
 
+for (var i = 0; i < skillsDescriptionFront.length; i++) 
+{
+  skillsDescriptionFront[i].addEventListener('mouseout', function(e) {
+    skillsMouseOut(frontEndSkills, 'front');
+  });
+}
+
+for (var i = 0; i < skillsDescriptionBack.length; i++) 
+{
+  skillsDescriptionBack[i].addEventListener('mouseout', function(e) {
+    skillsMouseOut(backEndSkills, 'back');
+  });
+}
+
+for (var i = 0; i < skillsDescriptionOthers.length; i++) 
+{
+  skillsDescriptionOthers[i].addEventListener('mouseout', function(e) {
+    skillsMouseOut(othersSkills, 'others');
+  });
+}
 
 
-function explodeBalls(balls)
+function explodeBalls(balls, type)
 {
   console.log('hover skills ball');
 
@@ -119,6 +150,22 @@ function explodeBalls(balls)
   if (circleRadius < 110) 
   {
     circleRadius = 110;
+  }
+
+  if (type == 'front') 
+  {
+    backEndSkillsBall.style.zIndex = '40';
+    othersSkillsBall.style.zIndex = '40';
+  }
+  else if (type == 'back') 
+  {
+    frontEndSkillsBall.style.zIndex = '40';
+    othersSkillsBall.style.zIndex = '40';
+  }
+  else if (type == 'others') 
+  {
+    frontEndSkillsBall.style.zIndex = '40';
+    backEndSkillsBall.style.zIndex = '40';
   }
 
   // boucle sur les skills en incrémentant l'angle, vérifier a quel quart l'angle appartient puis cos/tan les coordonnées 
@@ -244,3 +291,32 @@ function getNextPosition(angle, radius)
 
   return circle;
 } // fin fonction
+
+
+function skillsMouseOut(skills, type)
+{
+  if (type == 'front') 
+  {
+    backEndSkillsBall.style.zIndex = '50';
+    othersSkillsBall.style.zIndex = '50';
+  }
+  else if (type == 'back') 
+  {
+    frontEndSkillsBall.style.zIndex = '50';
+    othersSkillsBall.style.zIndex = '50';
+  }
+  else if (type == 'others')
+  {
+    frontEndSkillsBall.style.zIndex = '50';
+    backEndSkillsBall.style.zIndex = '50';
+  }
+
+  for (var i = 0; i < skills.length; i++) 
+  {
+    skills[i].style.top = '10px';
+    skills[i].style.left = '10px';
+    skills[i].style.right = '10px';
+    skills[i].style.bottom = '10px';
+    skills[i].style.zIndex = '40';
+  }
+}

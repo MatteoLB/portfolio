@@ -11,14 +11,15 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800|Work+Sans:300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
 
     <title>Portfolio Mattéo Le Berre</title>
   </head>
   <body>
 
     <nav id="navbar">
-      <div class="mx-auto text-center">
-        <ul class="d-flex mx-auto justify-content-center">
+      <div class="mx-md-auto text-center">
+        <ul class="d-flex mx-md-auto justify-content-center">
           <li><button class="navButton traduction" id="navSkillsButton" data-traduction="mySkills">My Skills</button></li>
           <li><button class="navButton traduction" id="navAboutMeButton" data-traduction="aboutMe">About Me</button></li>
           <li><button class="navButton traduction activePage" id="navProjectsButton" data-traduction="myProjects">My Projects</button></li>
@@ -36,7 +37,7 @@
           <p class="iamAnimation"><span class="slideDown">I</span> <span class="slideUp">A</span><span class="slideDown">M</span></p>
         </div>
 
-        <div class="col-7 mb-5" id="aboutMeContent">
+        <div class="col-6 mb-5" id="aboutMeContent">
           <h1 class="mt-5 mb-1 slideLeft">Mattéo Le Berre</h1>
           <h2 class="h3 slideRight traduction" data-traduction="statusTitle">Full stack web developer in formation</h2>
           <p class="mb-4 networksLinks">
@@ -44,12 +45,11 @@
             <a href="#" class="slideDown"><i class="fab fa-linkedin linkedinIcon"></i> Linkedin</a>
           </p>
 
-         <!--  <p class="slideLeft">After a few months of e-learning, I followed the full-stack web developer formation Passerelle Numérique. The next year, I started a developer block release training at the CESI while working as a web developer at KMS, a sportive events agency, since september 2019. 
-          I am now looking for a job in the web development field.</p>
-
-          <p class="slideLeft">I am currently searching for a job in the web development field, after one year of block release training at the CESI developer formation while working as a web developer for KMS, a sportive events agency since september 2019.</p>
-           -->
-          <p class="slideLeft">Having followed an 8 month formation in full stack web development followed by one year of block release training at the CESI developer formation, while working as a web developer for KMS (a sportive events agency) since september 2019, I am now searching for a job in the web development field.</p>
+          <!-- <p class="slideLeft">Having followed an 8 month formation in full stack web development followed by one year of block release training at the CESI developer formation, while working as a web developer for KMS (a sportive events agency) since september 2019, I am now searching for a job in the web development field.</p> -->
+          <p class="slideLeft" id="myDescription"><!-- My name is Mattéo and  -->I am a <!-- passionate --> full stack web developer based in France. <br>
+            Having accomplished an 8 months program to become so, followed by one year of block release training at the CESI Developer Training where I had the opportunity to work as a developer for KMS (a sports events agency). <br> 
+            <!-- I am now looking for a company that will benefit from my passion and my skills. --> 
+            I am now looking for a company where I can put my skills and motivation to good use with a full-time job.</p>
         </div> <!-- col -->
       </div> <!-- row -->
     </div> <!-- container-fluid -->
@@ -219,9 +219,9 @@
                      l 200 0 Z -->
             </div>
 
-            <p>As a junior full stack web developer, I can design and develop websites using various <strong>front-end</strong> (<span class="skillsColor">HTML, CSS, JavaScript, Bootstrap, Angular</span>) & <strong>back-end</strong> (<span class="skillsColor">PHP, Node.js, SQL,</span> and 
-              <span class="skillsColor">UNIX</span> systems) technologies, or a <strong>CMS</strong> (<span class="skillsColor">WordPress</span>).<br>
-              I've also got some knowledge of the <span class="skillsColor">C</span> and <span class="skillsColor">Python</span> languages.</p>
+            <p>As a junior full stack web developer, I can design and build websites using various <strong>front-end</strong> (<span class="skillsColor skillsDescriptionFront">HTML, CSS, JavaScript, Bootstrap, Angular</span>) & <strong>back-end</strong> (<span class="skillsColor skillsDescriptionBack">PHP, Node.js, SQL,</span> and 
+              <span class="skillsColor skillsDescriptionBack">UNIX</span> systems) technologies, or a <strong>CMS</strong> (<span class="skillsColor skillsDescriptionOthers">WordPress</span>).<br>
+              I've also got some knowledge of the <span class="skillsColor skillsDescriptionOthers">C</span> and <span class="skillsColor skillsDescriptionOthers">Python</span> languages.</p>
           </div>
           
           <div class="col-5">
@@ -328,81 +328,85 @@
       <h1 class="text-center mt-5">My Projects</h1>
 
       <div class="row mb-5 mt-4">
-        <div class="col-3 mx-auto projectSeparator mt-5"></div>
+        <div class="col-md-3 col-6 mx-auto projectSeparator mt-md-5"></div>
       </div>
 
-      <div class="row px-5 pt-4">
+      <div class="row px-md-5 pt-md-4">
 
         <!-- e-commerce -->
 
-        <div class="col-5 projectImgLeft my-5">
+        <div class="col-md-5 col-12 projectImgLeft my-md-5 order-1 order-md-1">
           <img src="resources/projet1screen.PNG" class="img-fluid shadow">
         </div>
-        <div class="col-7 shadow projectCardRight my-5">
+        <div class="col-md-7 col-11 shadow projectCardRight my-md-5 order-2 order-md-2">
           <h2>E-COMMERCE</h2>
           <!-- <p class="my-4">Projet de site d'e-commerce, réalisé au cours de la formation Passerelle Numérique en tant que premier projet. Les technologies utilisées sont <strong>HTML</strong> et <strong>CSS</strong></p> -->
 
-          <p class="my-4">E-commerce landing page, made during the Passerelle Numérique formation as a first project using <strong>HTML</strong> and <strong>CSS</strong> only.</p>
-          <div>
+          <p class="my-4">E-commerce landing page, made during the Passerelle Numérique program as a first project using <strong>HTML</strong> and <strong>CSS</strong> only.</p>
+
+          <div class="d-flex flex-wrap">
             <a target="_blank" href="https://matteolb.github.io/Projet_1_e_commerce/" class="projectButton">VISIT THE WEBSITE</a>
-            <a target="_blank" href="https://github.com/MatteoLB/Projet_1_e_commerce" class="projectButton projectButtonGithub mx-2">SEE ON GITHUB</a>
+            <a target="_blank" href="https://github.com/MatteoLB/Projet_1_e_commerce" class="projectButton projectButtonGithub mx-sm-2">SEE ON GITHUB</a>
           </div>
         </div> <!-- col-8 -->
 
 
-        <div class="col-12 p-3"></div>
+        <div class="col-12 p-3 order-3"></div>
 
         <!-- brutalist -->
 
-        <div class="col-7 shadow projectCardLeft my-5">
+        <div class="col-md-7 col-11 shadow projectCardLeft my-md-5 order-5 order-md-4">
           <h2>BRUTALISM</h2>
           <!-- <p class="my-4">Projet de site de présentation d'un événement d'art numérique en design brutaliste, réalisé au cours de la formation Passerelle Numérique. Les technologies utilisées sont <strong>HTML</strong>, <strong>CSS</strong>, et <strong>JavaScript</strong></p> -->
 
-          <p class="my-4">Brutalist design project presenting a made up digital art event, made during the Passerelle Numérique formation, using the following technologies : <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.</p>
-          <div>
+          <p class="my-4">Brutalist design project showing a made up digital art event, made during the Passerelle Numérique training, using the following technologies : <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.</p>
+
+          <div class="d-flex flex-wrap">
             <a target="_blank" href="https://matteolb.github.io/projet-web-brutaliste/" class="projectButton">VISIT THE WEBSITE</a>
-            <a target="_blank" href="https://github.com/MatteoLB/projet-web-brutaliste" class="projectButton projectButtonGithub mx-2">SEE ON GITHUB</a>
+            <a target="_blank" href="https://github.com/MatteoLB/projet-web-brutaliste" class="projectButton projectButtonGithub mx-sm-2">SEE ON GITHUB</a>
           </div>
         </div> <!-- col-8 -->
-        <div class="col-5 projectImgRight my-5">
+        <div class="col-md-5 col-12 projectImgRight my-md-5 order-4 order-md-5">
           <img src="resources/art_numerique_desktop4.gif" class="img-fluid shadow">
         </div>
 
 
-        <div class="col-12 p-3"></div>
+        <div class="col-12 p-3 order-6"></div>
 
         <!-- afterwork -->
 
-        <div class="col-5 projectImgLeft my-5">
+        <div class="col-md-5 col-12 projectImgLeft my-md-5 order-7 order-md-7">
           <img src="resources/misa_desktop3.gif" class="img-fluid shadow">
         </div>
-        <div class="col-7 shadow projectCardRight my-5">
+        <div class="col-md-7 col-11 shadow projectCardRight my-md-5 order-8 order-md-8">
           <h2>AFTERWORK</h2>
           <!-- <p class="my-4">Projet de site d'e-commerce, réalisé au cours de la formation Passerelle Numérique en tant que premier projet. Les technologies utilisées sont <strong>HTML</strong> et <strong>CSS</strong></p> -->
 
-          <p class="my-4">Game designed for the afterwork of the Passerelle Numérique formation, with a team of 3 peoples and using <strong>HTML, CSS</strong>, and <strong>JavaScript</strong>.</p>
-          <div>
+          <p class="my-4">Teamwork game with 3 participants designed for the afterwork of the Passerelle Numérique training using <strong>HTML, CSS</strong>, and <strong>JavaScript</strong>.</p>
+
+          <div class="d-flex flex-wrap">
             <a target="_blank" href="https://matteolb.github.io/afterwork-misa/" class="projectButton">VISIT THE WEBSITE</a>
-            <a target="_blank" href="https://github.com/MatteoLB/afterwork-misa" class="projectButton projectButtonGithub mx-2">SEE ON GITHUB</a>
+            <a target="_blank" href="https://github.com/MatteoLB/afterwork-misa" class="projectButton projectButtonGithub mx-sm-2">SEE ON GITHUB</a>
           </div>
         </div> <!-- col-8 -->
 
 
-        <div class="col-12 p-3"></div>
+        <div class="col-12 p-3 order-9"></div>
 
         <!-- game site -->
 
-        <div class="col-7 shadow projectCardLeft my-5">
+        <div class="col-md-7 col-11 shadow projectCardLeft my-md-5 order-11 order-md-10">
           <h2>Games</h2>
           <!-- <p class="my-4">Projet de site de présentation d'un événement d'art numérique en design brutaliste, réalisé au cours de la formation Passerelle Numérique. Les technologies utilisées sont <strong>HTML</strong>, <strong>CSS</strong>, et <strong>JavaScript</strong></p> -->
 
-          <p class="my-4">Page containing links towards various mini games which I created before entering the Passerelle Numérique formation. Those were all developed using <strong>HTML, CSS</strong> and <strong>JavaScript</strong>.</p>
-          <div>
+          <p class="my-4">Page containing links towards various mini games which I created before entering the Passerelle Numérique training. Those were all developed using <strong>HTML, CSS</strong> and <strong>JavaScript</strong>.</p>
+
+          <div class="d-flex flex-wrap">
             <a target="_blank" href="https://matteolb.github.io/games/" class="projectButton">VISIT THE WEBSITE</a>
-            <a target="_blank" href="https://github.com/MatteoLB/games" class="projectButton projectButtonGithub mx-2">SEE ON GITHUB</a>
+            <a target="_blank" href="https://github.com/MatteoLB/games" class="projectButton projectButtonGithub mx-sm-2">SEE ON GITHUB</a>
           </div>
         </div> <!-- col-8 -->
-        <div class="col-5 projectImgRight my-5">
+        <div class="col-md-5 col-12 projectImgRight my-md-5 order-10 order-md-11">
           <!-- <img src="resources/projet2screen2.png" class="img-fluid shadow"> -->
           <img src="resources/game_site.PNG" class="img-fluid shadow">
         </div>
