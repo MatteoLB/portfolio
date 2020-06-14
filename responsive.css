@@ -28,12 +28,17 @@
 
 	/* *********************************************************** ABOUT ME *********************************************************** */
 
+	#aboutMeContainer
+	{
+		padding-bottom: 50px;
+	}
+	
 	#aboutMeContent
 	{
 		display: flex;
 		flex-direction: column;
 	}
-	
+
 	#aboutMeContent h1
 	{
 		text-align: center;
