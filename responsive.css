@@ -1,5 +1,15 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-device-width : 600px) {
+	
+	.mobile-hidden
+	{
+		display: none;
+	}
+	.mobile-only
+	{
+		display: block;
+	}
+
 	.navButton
 	{
 		font-size: 1rem;
@@ -15,6 +25,24 @@
 		margin-left: 0px !important;
 	}
 
+
+	/* *********************************************************** ABOUT ME *********************************************************** */
+
+	#aboutMeContent
+	{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#aboutMeContent h1
+	{
+		text-align: center;
+	}
+
+
+
+
+	/* ********************************************************** MY PROJECTS ********************************************************* */
 
 	#projectsContainer h1
 	{

@@ -33,16 +33,17 @@
     <div class="container-fluid" id="aboutMeContainer">
       <div class="row align-items-center">
 
-        <div class="col-5 text-center" id="iam">
+        <div class="col-md-5 text-center mobile-hidden" id="iam">
           <p class="iamAnimation"><span class="slideDown">I</span> <span class="slideUp">A</span><span class="slideDown">M</span></p>
         </div>
 
-        <div class="col-6 mb-5" id="aboutMeContent">
-          <h1 class="mt-5 mb-1 slideLeft">Mattéo Le Berre</h1>
-          <h2 class="h3 slideRight traduction" data-traduction="statusTitle">Full stack web developer in formation</h2>
+        <div class="col-md-6 mb-5" id="aboutMeContent">
+          <h1 class="mt-5 mb-1 slideLeft">Mattéo <br class="mobile-only"> Le Berre</h1>
+          <h2 class="h3 slideRight traduction" data-traduction="statusTitle">Full stack web developer</h2>
           <p class="mb-4 networksLinks">
-            <a href="#" class="mr-3 slideUp"><i class="fab fa-github githubIcon"></i> Github</a>
-            <a href="#" class="slideDown"><i class="fab fa-linkedin linkedinIcon"></i> Linkedin</a>
+            <a target="_blank" href="https://github.com/MatteoLB" class="mr-3 slideUp"><i class="fab fa-github githubIcon"></i> Github</a>
+            <a target="_blank" href="https://www.linkedin.com/in/matteo-le-berre/" class="mr-3 slideDown"><i class="fab fa-linkedin linkedinIcon"></i> Linkedin</a>
+            <a target="_blank" href="resources/Matteo_Le_Berre_CV.pdf" class="slideUp"><i class="fas fa-file-alt"></i> CV</a>
           </p>
 
           <!-- <p class="slideLeft">Having followed an 8 month formation in full stack web development followed by one year of block release training at the CESI developer formation, while working as a web developer for KMS (a sportive events agency) since september 2019, I am now searching for a job in the web development field.</p> -->
@@ -56,14 +57,13 @@
 
 
     <div id="traductions" class="d-none">
-      <div id="mySkillsFR">Compétences</div>
-      <div id="mySkillsEN">My Skills</div>
+      <div id="mySkillsTrad">Compétences</div>
 
-      <div id="aboutMeFR">A Propos</div>
-      <div id="aboutMeEN">About Me</div>
+      <div id="aboutMeTrad">À Propos</div>
 
-      <div id="myProjectsFR">Mes Projets</div>
-      <div id="myProjectsEN">My Projects</div>
+      <div id="myProjectsTrad">Mes Projets</div>
+
+      <div id="statusTitleTrad">Développeur web full-stack</div>
     </div>
 
     <!-- ------------------------------------------------------- SKILLS --------------------------------------------------------- -->
@@ -74,7 +74,7 @@
           <div class="col-7">
             <!-- <h1 class="mb-4">Skills & formation</h1> -->
 
-            <div class="svgTitle mb-4">
+            <div class="svgTitle mb-4 slideUp">
               <svg class="svgContent" viewbox="0 0 400 120" preserveAspectRatio="xMinYMin meet">
                 <path class="path" fill="none" stroke="white" stroke-width="1"
                   d="M 7.25,64.38
@@ -219,7 +219,7 @@
                      l 200 0 Z -->
             </div>
 
-            <p>As a junior full stack web developer, I can design and build websites using various <strong>front-end</strong> (<span class="skillsColor skillsDescriptionFront">HTML, CSS, JavaScript, Bootstrap, Angular</span>) & <strong>back-end</strong> (<span class="skillsColor skillsDescriptionBack">PHP, Node.js, SQL,</span> and 
+            <p class="slideLeft">As a junior full stack web developer, I can design and build websites using various <strong>front-end</strong> (<span class="skillsColor skillsDescriptionFront">HTML, CSS, JavaScript, Bootstrap, Angular</span>) & <strong>back-end</strong> (<span class="skillsColor skillsDescriptionBack">PHP, Node.js, SQL,</span> and 
               <span class="skillsColor skillsDescriptionBack">UNIX</span> systems) technologies, or a <strong>CMS</strong> (<span class="skillsColor skillsDescriptionOthers">WordPress</span>).<br>
               I've also got some knowledge of the <span class="skillsColor skillsDescriptionOthers">C</span> and <span class="skillsColor skillsDescriptionOthers">Python</span> languages.</p>
           </div>
@@ -228,7 +228,7 @@
 
             <div class="svgContainer">
 
-              <div class="skillsBalls" id="frontEndSkillsBall">
+              <div class="skillsBalls slideRight" id="frontEndSkillsBall">
                 <span>FRONT-END</span>
                 <div class="frontEndSkills">HTML</div>
                 <div class="frontEndSkills">CSS</div>
@@ -238,7 +238,7 @@
                 <div class="frontEndSkills">JQuery</div>
               </div>
 
-              <div class="skillsBalls" id="backEndSkillsBall">
+              <div class="skillsBalls slideDown" id="backEndSkillsBall">
                 <span>BACK-END</span>
                 <div class="backEndSkills">PHP</div>
                 <div class="backEndSkills">UNIX</div>
@@ -247,7 +247,7 @@
                 <div class="backEndSkills">Node.js</div>
               </div>
 
-              <div class="skillsBalls" id="othersSkillsBall">
+              <div class="skillsBalls slideUp" id="othersSkillsBall">
                 <span>OTHERS</span>
                 <div class="othersSkills">C</div>
                 <div class="othersSkills">Python</div>
@@ -325,20 +325,20 @@
     <!-- ------------------------------------------------------- PROJECTS --------------------------------------------------------- -->
 
     <div class="container-fluid pb-5" id="projectsContainer">
-      <h1 class="text-center mt-5">My Projects</h1>
+      <h1 class="text-center mt-5 slideUp">My Projects</h1>
 
       <div class="row mb-5 mt-4">
-        <div class="col-md-3 col-6 mx-auto projectSeparator mt-md-5"></div>
+        <div class="col-md-3 col-6 mx-auto projectSeparator mt-md-5 slideDown"></div>
       </div>
 
       <div class="row px-md-5 pt-md-4">
 
         <!-- e-commerce -->
 
-        <div class="col-md-5 col-12 projectImgLeft my-md-5 order-1 order-md-1">
+        <div class="col-md-5 col-12 projectImgLeft my-md-5 order-1 order-md-1 slideLeft">
           <img src="resources/projet1screen.PNG" class="img-fluid shadow">
         </div>
-        <div class="col-md-7 col-11 shadow projectCardRight my-md-5 order-2 order-md-2">
+        <div class="col-md-7 col-11 shadow projectCardRight my-md-5 order-2 order-md-2 slideRight">
           <h2>E-COMMERCE</h2>
           <!-- <p class="my-4">Projet de site d'e-commerce, réalisé au cours de la formation Passerelle Numérique en tant que premier projet. Les technologies utilisées sont <strong>HTML</strong> et <strong>CSS</strong></p> -->
 
@@ -355,7 +355,7 @@
 
         <!-- brutalist -->
 
-        <div class="col-md-7 col-11 shadow projectCardLeft my-md-5 order-5 order-md-4">
+        <div class="col-md-7 col-11 shadow projectCardLeft my-md-5 order-5 order-md-4 slideLeft">
           <h2>BRUTALISM</h2>
           <!-- <p class="my-4">Projet de site de présentation d'un événement d'art numérique en design brutaliste, réalisé au cours de la formation Passerelle Numérique. Les technologies utilisées sont <strong>HTML</strong>, <strong>CSS</strong>, et <strong>JavaScript</strong></p> -->
 
@@ -366,7 +366,7 @@
             <a target="_blank" href="https://github.com/MatteoLB/projet-web-brutaliste" class="projectButton projectButtonGithub mx-sm-2">SEE ON GITHUB</a>
           </div>
         </div> <!-- col-8 -->
-        <div class="col-md-5 col-12 projectImgRight my-md-5 order-4 order-md-5">
+        <div class="col-md-5 col-12 projectImgRight my-md-5 order-4 order-md-5 slideRight">
           <img src="resources/art_numerique_desktop4.gif" class="img-fluid shadow">
         </div>
 
@@ -375,10 +375,10 @@
 
         <!-- afterwork -->
 
-        <div class="col-md-5 col-12 projectImgLeft my-md-5 order-7 order-md-7">
+        <div class="col-md-5 col-12 projectImgLeft my-md-5 order-7 order-md-7 slideLeft">
           <img src="resources/misa_desktop3.gif" class="img-fluid shadow">
         </div>
-        <div class="col-md-7 col-11 shadow projectCardRight my-md-5 order-8 order-md-8">
+        <div class="col-md-7 col-11 shadow projectCardRight my-md-5 order-8 order-md-8 slideRight">
           <h2>AFTERWORK</h2>
           <!-- <p class="my-4">Projet de site d'e-commerce, réalisé au cours de la formation Passerelle Numérique en tant que premier projet. Les technologies utilisées sont <strong>HTML</strong> et <strong>CSS</strong></p> -->
 
@@ -395,7 +395,7 @@
 
         <!-- game site -->
 
-        <div class="col-md-7 col-11 shadow projectCardLeft my-md-5 order-11 order-md-10">
+        <div class="col-md-7 col-11 shadow projectCardLeft my-md-5 order-11 order-md-10 slideLeft">
           <h2>Games</h2>
           <!-- <p class="my-4">Projet de site de présentation d'un événement d'art numérique en design brutaliste, réalisé au cours de la formation Passerelle Numérique. Les technologies utilisées sont <strong>HTML</strong>, <strong>CSS</strong>, et <strong>JavaScript</strong></p> -->
 
@@ -406,7 +406,7 @@
             <a target="_blank" href="https://github.com/MatteoLB/games" class="projectButton projectButtonGithub mx-sm-2">SEE ON GITHUB</a>
           </div>
         </div> <!-- col-8 -->
-        <div class="col-md-5 col-12 projectImgRight my-md-5 order-10 order-md-11">
+        <div class="col-md-5 col-12 projectImgRight my-md-5 order-10 order-md-11 slideRight">
           <!-- <img src="resources/projet2screen2.png" class="img-fluid shadow"> -->
           <img src="resources/game_site.PNG" class="img-fluid shadow">
         </div>

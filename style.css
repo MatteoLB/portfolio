@@ -13,6 +13,16 @@ h1
 	font-size: 4rem;
 }
 
+#aboutMeContainer, #projectsContainer, #skillsContainer
+{
+	overflow-x: hidden;
+}
+
+.mobile-only 
+{
+	display: none;
+}
+
 
 /* ************************************************************************* NAVBAR **************************************************************** */
 
@@ -63,7 +73,6 @@ h1
 
 #aboutMeContainer
 {
-	overflow-x: hidden;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -110,28 +119,30 @@ h1
 
 .networksLinks a:hover
 {
-	color: silver;
+	color: #a20000;
+	transition: 0.3s;
 	text-decoration: none;
+}
+
+#aboutMeContainer .slideLeft, #aboutMeContainer .slideRight, #aboutMeContainer .slideUp, #aboutMeContainer .slideDown
+{
+	display: inline-block;
 }
 
 .slideLeft
 {
-	display: inline-block;
 	animation: 1.5s slideLeft forwards;
 }
 .slideRight
 {
-	display: inline-block;
 	animation: 1.5s slideRight forwards;
 }
 .slideUp
 {
-	display: inline-block;
 	animation: 1.5s slideUp forwards;
 }
 .slideDown
 {
-	display: inline-block;
 	animation: 1.5s slideDown forwards;
 }
 
@@ -300,6 +311,26 @@ svg path
 }
 
 @keyframes dash {
+	0%
+	{
+		fill: transparent;
+	}
+	30%
+	{
+		fill: transparent;
+	}
+	40%
+	{
+		fill: rgb(240,240,240);
+	}
+  	100% 
+  	{
+    	stroke-dashoffset: 0;
+		fill: rgb(240,240,240);
+  	}
+}
+
+@keyframes dashOriginal {
 	from 
 	{
 		fill: transparent;
@@ -383,8 +414,44 @@ svg path
     z-index: 160;
     justify-content: center;
     align-items: center;
+    animation: flashDisappearing 6s infinite linear;
+    animation-timing-function: ease-in-out;
 }
 
+/*@keyframes flashGrowAndShrink
+{
+	0%, 41% {
+		box-shadow: none;
+	}
+	42% {
+		box-shadow: 0px 0px 0px 0px rgba(255, 230, 0, 0.8);
+	}
+	50% {
+		box-shadow: 0px 0px 40px 4px rgba(255, 230, 0, 0.8);
+	}
+	58% {
+		box-shadow: 0px 0px 0px 0px rgba(255, 230, 0, 0.8);
+	}
+	59%, 100% {
+		box-shadow: none;
+	}
+}*/
+
+@keyframes flashDisappearing
+{
+	0%, 21% {
+		box-shadow: none;
+	}
+	22% {
+		box-shadow: 0px 0px 0px 0px rgba(255, 230, 0, 0.6);
+	}
+	45% {
+		box-shadow: 0px 0px 60px 6px rgba(255, 230, 0, 0);
+	}
+	46%, 100% {
+		box-shadow: none;
+	}
+}
 
 .skillsBalls:nth-child(1)
 {
@@ -489,19 +556,11 @@ svg path
 
 #projectsContainer h1
 {
-	font-size: 18rem;
+	font-size: 8rem;
 	font-weight: 500;
 	font-family: 'Dosis', sans-serif;
-	animation: titleShrink 1s forwards;
 }
 
-@keyframes titleShrink
-{
-	to
-	{
-		font-size: 8rem;
-	}
-}
 
 .projectSeparator
 {
@@ -550,15 +609,6 @@ svg path
 	left: 43px;
 }
 
-.projectImgLeft, .projectCardLeft 
-{
-	animation: 1s slideLeft forwards;
-}
-
-.projectImgRight, .projectCardRight
-{
-	animation: 1s slideRight forwards;
-}
 
 .projectCardRight h2, .projectCardLeft h2
 {
