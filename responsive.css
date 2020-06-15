@@ -30,9 +30,9 @@
 
 	#aboutMeContainer
 	{
-		padding-bottom: 50px;
+		padding-bottom: 50px; /* ??? */
 	}
-	
+
 	#aboutMeContent
 	{
 		display: flex;
@@ -44,6 +44,19 @@
 		text-align: center;
 	}
 
+
+	/* *********************************************************** MY SKILLS ********************************************************** */
+
+	#skillsContainer
+	{
+		overflow-y: auto;
+	}
+	
+	.svgTitle
+	{
+		margin-top: 50px;
+		height: 100px;
+	}
 
 
 

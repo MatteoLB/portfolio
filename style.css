@@ -271,6 +271,7 @@ svg path
 #skillsContainer
 {
 	position: absolute;
+	overflow-y: hidden;
 	top: 0px;
 	left: 0px;
 	width: 100%;
