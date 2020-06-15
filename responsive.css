@@ -37,7 +37,7 @@
 	{
 		display: flex;
 		flex-direction: column;
-		padding-top: 50px;
+		padding-top: 70px;
 	}
 
 	#aboutMeContent h1
@@ -55,7 +55,7 @@
 
 	.svgTitle
 	{
-		margin-top: 40px;
+		margin-top: 25px;
 		height: 100px;
 	}
 
