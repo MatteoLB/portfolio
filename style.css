@@ -113,14 +113,16 @@ h1
 
 .networksLinks
 {
-	color: #670000;
+	/*color: #670000;*/
+	color: #ffd29f;
 	font-weight: 600;
 }
 
 .networksLinks a:hover
 {
-	color: #a20000;
-	transition: 0.3s;
+	/*color: #a20000;*/
+	color: #670000;
+	transition: 0.6s;
 	text-decoration: none;
 }
 
@@ -419,25 +421,6 @@ svg path
     animation-timing-function: ease-in-out;
 }
 
-/*@keyframes flashGrowAndShrink
-{
-	0%, 41% {
-		box-shadow: none;
-	}
-	42% {
-		box-shadow: 0px 0px 0px 0px rgba(255, 230, 0, 0.8);
-	}
-	50% {
-		box-shadow: 0px 0px 40px 4px rgba(255, 230, 0, 0.8);
-	}
-	58% {
-		box-shadow: 0px 0px 0px 0px rgba(255, 230, 0, 0.8);
-	}
-	59%, 100% {
-		box-shadow: none;
-	}
-}*/
-
 @keyframes flashDisappearing
 {
 	0%, 21% {
@@ -501,41 +484,6 @@ svg path
 .svgTitle
 {
 	height: 200px;
-}
-
-.svgFrontEnd
-{
-	animation: switchSVG ease-out 12s infinite;
-}
-
-.svgBackEnd
-{
-	animation: switchSVG ease-out 12s infinite;
-	animation-delay: -6s;
-}
-
-@keyframes switchSVG 
-{
-	0%
-	{
-		transform: scale(0, 1);
-	}
-	10%
-	{
-		transform: scale(0.95);
-	}
-	45%
-	{
-		transform: scale(1);
-	}
-	50%
-	{
-		transform: scale(0, 1);
-	}
-	100%
-	{
-		transform: scale(0, 1);
-	}
 }
 
 

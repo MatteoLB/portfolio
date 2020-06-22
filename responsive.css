@@ -43,7 +43,7 @@
 		margin-top: 40px;
 	}
 
-	#aboutMeContent h1
+	#aboutMeContent h1, #aboutMeContent h2
 	{
 		text-align: center;
 	}
@@ -60,6 +60,28 @@
 	{
 		margin-top: 25px;
 		height: 100px;
+	}
+
+	.skillsBalls, .skillsBalls span
+	{
+		font-size: 0.7rem;
+		width: 80px;
+		height: 80px;
+	}
+
+	.frontEndSkills, .backEndSkills, .othersSkills
+	{
+		width: 70px;
+		height: 70px;
+		left: 5px;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+	}
+
+	.skillsBalls:nth-child(1), .skillsBalls:nth-child(2), .skillsBalls:nth-child(3)
+	{
+		margin-top: 0%;
 	}
 
 

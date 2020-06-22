@@ -19,6 +19,13 @@ let othersSkills = document.getElementsByClassName('othersSkills');
 let skillsDescriptionOthers = document.getElementsByClassName('skillsDescriptionOthers');
 
 let mediaQuery = window.matchMedia("screen and (min-width: 1350px)");
+let smallScreen = false;
+
+if (!mediaQuery.matches) // ***************************************************************************************************
+{
+  console.log('small screen');
+  smallScreen = true;
+}
 
 
 // display skills page
@@ -61,11 +68,6 @@ projectsButton.addEventListener('click', function() {
 });
 
 
-
-if (!mediaQuery.matches) // ***************************************************************************************************
-{
-  console.log('petit ecran');
-}
 
 // display the various kinds of skills
 frontEndSkillsBall.addEventListener('mouseover', function(e) {
@@ -143,13 +145,25 @@ function explodeBalls(balls, type)
   // calculating the circle perimeter (balls diameters * number of balls) + (space between balls * number of balls minus 1) 
   // divide by pi then by 2 to get radius
   let width = 100;
-  let ballsMargin = 60;
+  let ballsMargin = 50;
+
+  if (smallScreen) 
+  {
+    width = 60;
+    ballsMargin = 20;
+  }
+
   let circleRadius = ( (width * balls.length) + (ballsMargin * (balls.length -1)) ) / Math.PI / 2; 
   let angle = 360/balls.length;
 
   if (circleRadius < 110) 
   {
     circleRadius = 110;
+
+    if (smallScreen) 
+    {
+      circleRadius -= 6 * balls.length;
+    }
   }
 
   if (type == 'front') 
@@ -174,17 +188,20 @@ function explodeBalls(balls, type)
   for (var i = 0; i < balls.length; i++) 
   {
     let circle = getNextPosition(angle * i, circleRadius);
+    let offset = 0;
 
     balls[i].style.zIndex = '130';
 
     if (circle.x > 0) 
     {
-      balls[i].style.left = circle.x + 20 + 'px'; 
+      offset = (smallScreen ? 10 : 20);
+      balls[i].style.left = circle.x + offset + 'px'; 
     }
     else if (circle.x == 0) 
-      {
-        balls[i].style.left = 10 + 'px'; 
-      }
+    {
+      offset = (smallScreen ? 5 : 10);
+      balls[i].style.left = offset + 'px'; 
+    }
     else
     {
       balls[i].style.left = circle.x + 'px'; 
@@ -192,7 +209,8 @@ function explodeBalls(balls, type)
 
     if (circle.y > 0) 
     {
-      balls[i].style.top = circle.y + 20 + 'px'; 
+      offset = (smallScreen ? 10 : 20);
+      balls[i].style.top = circle.y + offset + 'px'; 
     }
     else
     {
@@ -313,10 +331,17 @@ function skillsMouseOut(skills, type)
 
   for (var i = 0; i < skills.length; i++) 
   {
-    skills[i].style.top = '10px';
-    skills[i].style.left = '10px';
-    skills[i].style.right = '10px';
-    skills[i].style.bottom = '10px';
+    let ballsAbsolutePosition = 10;
+
+    if (smallScreen) 
+    {
+      ballsAbsolutePosition = 5;
+    }
+
+    skills[i].style.top = ballsAbsolutePosition + 'px';
+    skills[i].style.left = ballsAbsolutePosition + 'px';
+    skills[i].style.right = ballsAbsolutePosition + 'px';
+    skills[i].style.bottom = ballsAbsolutePosition + 'px';
     skills[i].style.zIndex = '40';
   }
 }
