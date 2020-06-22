@@ -53,7 +53,7 @@
 
 	#skillsContainer
 	{
-		overflow-y: auto;
+		overflow-y: hidden;
 	}
 
 	.svgTitle
