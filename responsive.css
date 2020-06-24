@@ -177,6 +177,53 @@
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width : 601px) and (max-width : 1000px) {
 
+	.medium-hidden
+	{
+		display: none;
+	}
+
+	#aboutMeContainer
+	{
+		padding: 40px;
+	}
+
+	#aboutMeContent
+	{
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	/* ***************************************************** PROJECTS ******************************************************* */
+
+	#projectsContainer h1
+	{
+		font-size: 3rem;
+		animation: none;
+	}
+
+	.projectImgLeft, .projectImgRight
+	{
+		margin: auto;
+	    bottom: 0px;
+	    right: 0;
+	    left: 75px;
+	}
+
+	.projectCardLeft, .projectCardRight
+	{
+	    top: -30px;
+	    margin: auto;
+		padding-right: 30px;
+		padding-left: 30px;
+		left: -30px;
+		right: 0;
+	}
+
+
+
+	/* ****************************************************** SKILLS ******************************************************** */
+
 	#skillsContainer
 	{
 		overflow-y: auto;
@@ -191,8 +238,6 @@
 	{
 		animation: none;
 	}
-
-
 
 	.skillsBalls, .skillsBalls span
 	{
