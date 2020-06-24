@@ -74,8 +74,8 @@
 
 	.frontEndSkills, .backEndSkills, .othersSkills
 	{
-		width: 70px;
-		height: 70px;
+		width: 65px;
+		height: 65px;
 		left: 5px;
 		top: 5px;
 		right: 5px;
@@ -131,12 +131,102 @@
 }
 
 
+@media only screen and (min-width : 1001px) and (max-width : 1200px) { /* medium screens but higher than bootstrap lg */
+	.svgTitle 
+	{
+		height: 110px;
+	}
+	.skillsBalls:nth-child(1)
+	{
+		margin-top: -10%;
+	}
+	.skillsBalls:nth-child(2)
+	{
+		margin-top: 20%;
+	}
+	.skillsBalls:nth-child(3)
+	{
+		margin-top: 40%;
+	}
+	.skillsBalls, .skillsBalls span
+	{
+		font-size: 0.8rem;
+		width: 100px;
+		height: 100px;
+	}
+	.skillsBalls
+	{
+		position: relative;
+		top: -2px;
+		left: -2px;
+	}
+
+	.frontEndSkills, .backEndSkills, .othersSkills
+	{
+		width: 80px;
+		height: 80px;
+		left: 5px;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+	}
+}
+
 /***********************************************************************************************************************************************/
 /***********************************************************************************************************************************************/
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 601px) and (max-device-width : 1350px) {
+@media only screen and (min-width : 601px) and (max-width : 1000px) {
 
+	#skillsContainer
+	{
+		overflow-y: auto;
+	}
 
+	.skillsBalls:nth-child(1), .skillsBalls:nth-child(2), .skillsBalls:nth-child(3)
+	{
+		margin-top: 0%;
+	}
 	
+	.skillsBalls:hover::after
+	{
+		animation: none;
+	}
+
+
+
+	.skillsBalls, .skillsBalls span
+	{
+		font-size: 0.8rem;
+		width: 100px;
+		height: 100px;
+	}
+	.skillsBalls
+	{
+		position: relative;
+		top: -2px;
+		left: -2px;
+	}
+
+	.frontEndSkills, .backEndSkills, .othersSkills
+	{
+		width: 80px;
+		height: 80px;
+		left: 5px;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+	}
+	
+
+	#skillsText
+	{
+		position: relative;
+		top: 100px;
+	}
+	.svgContainer
+	{
+		position: relative;
+		bottom: 170px;
+	}
 
 }

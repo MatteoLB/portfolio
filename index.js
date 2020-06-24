@@ -35,7 +35,6 @@ if (!mediaQuery.matches) // ****************************************************
 {
   console.log('small screen');
   smallScreen = true;
-  mediumScreen = false;
 }
 
 // display skills page
@@ -154,18 +153,22 @@ function explodeBalls(balls, type)
 
   // calculating the circle perimeter (balls diameters * number of balls) + (space between balls * number of balls minus 1)
   // divide by pi then by 2 to get radius
-  let width = 100;
-  let ballsMargin = 50;
+  let width = balls[0].offsetWidth;
+  let ballsMargin = 45;
 
-  if (smallScreen)
-  {
-    width = 60;
-    ballsMargin = 20;
-  }
-  if (mediumScreen)
+  console.log('width balls');
+  console.log(balls[0].offsetWidth);
+
+
+  if (mediumScreen) // medium avant parce que si on a small on a forcément medium mais pas l'inverse
   {
       ballsMargin = 30;
   }
+  if (smallScreen)
+  {
+    ballsMargin = 30;
+  }
+
 
   let circleRadius = ( (width * balls.length) + (ballsMargin * (balls.length -1)) ) / Math.PI / 2;
   let angle = 360/balls.length;
@@ -174,13 +177,13 @@ function explodeBalls(balls, type)
   {
     circleRadius = 110;
 
-    if (smallScreen)
-    {
-      circleRadius -= 6 * balls.length;
-    }
     if (mediumScreen)
     {
-      circleRadius -= 1 * balls.length;
+      circleRadius -= 3 / (balls.length/10);
+    }
+    if (smallScreen)
+    {
+      circleRadius -= 20 / (balls.length/10);
     }
   }
 
@@ -212,12 +215,12 @@ function explodeBalls(balls, type)
 
     if (circle.x > 0)
     {
-      offset = (smallScreen ? 10 : 20);
+      offset = (smallScreen ? 16 : 20);
       balls[i].style.left = circle.x + offset + 'px';
     }
     else if (circle.x == 0)
     {
-      offset = (smallScreen ? 5 : 10);
+      offset = (smallScreen ? 8 : 10);
       balls[i].style.left = offset + 'px';
     }
     else
@@ -227,7 +230,7 @@ function explodeBalls(balls, type)
 
     if (circle.y > 0)
     {
-      offset = (smallScreen ? 10 : 20);
+      offset = (smallScreen ? 16 : 20);
       balls[i].style.top = circle.y + offset + 'px';
     }
     else
@@ -351,7 +354,7 @@ function skillsMouseOut(skills, type)
   {
     let ballsAbsolutePosition = 10;
 
-    if (smallScreen)
+    if (smallScreen )
     {
       ballsAbsolutePosition = 5;
     }
